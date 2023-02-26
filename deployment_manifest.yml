@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-webserver-deployment
+  # namespace: apache-app
+  labels:
+    app: apache-web-app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: apache-web-app
+  template:
+    metadata:
+      labels:
+        app: apache-web-app
+    spec:
+      containers:
+      - name: apache-website
+        image: mooma/website:2.2
+        ports:
+        - name: http
+          containerPort: 80
+        imagePullPolicy: IfNotPresent
+      nodeSelector:
+        kubernetes.io/os: linux
