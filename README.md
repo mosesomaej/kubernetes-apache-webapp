@@ -6,7 +6,7 @@ In this project, I am using Kubernetes to orchestrate the deployment of a simple
 The image for the exercise was sources from my publicly repo on DockerHub (mooma/website:2.2)
 STEPS
 1.  Create an EKS cluster without nodegroup using default settings.
-    eksctl create cluster --name playgound --region us-west-2 --version 1.24  --without-nodegroup
+    - eksctl create cluster --name playgound --region us-west-2 --version 1.24  --without-nodegroup
 2.  Create a node group made up of three nodes
     eksctl create nodegroup \
       --cluster playground-cluster \
@@ -20,7 +20,7 @@ STEPS
       --ssh-access \
       --ssh-public-key us-west2-key
 3.  Create a deployment manifest for Apache webserver then run
-    kubectl apply -f <deployment name>
+    - kubectl apply -f deployment-name
 4.  Create a service manifest with the service type loadbalancer listening on port 80, then run
-    kubectl apply -f <service name>
+    - kubectl apply -f service-name
 5.  copy loadbalancer external ip and past in a browser
