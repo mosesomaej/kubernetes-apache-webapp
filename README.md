@@ -1,5 +1,5 @@
-## Orchestration Simple Apache Web App using EKS
-# Pre-requisite: 
+# Orchestration Simple Apache Web App using EKS
+## Pre-requisite: 
 Set up a Jenkins CICD pipeline that built and publish a simple web application to DockerHub(codes for web app was download from startbootstrap.com)
 
 In this project, I am using Kubernetes to orchestrate the deployment of a simple web app on the AWS platform.
