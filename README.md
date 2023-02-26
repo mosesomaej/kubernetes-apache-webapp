@@ -24,3 +24,7 @@ STEPS
 4.  Create a service manifest with the service type loadbalancer listening on port 80, then run
     - kubectl apply -f service-name
 5.  copy loadbalancer external ip and past in a browser
+6.  Delete service
+    - kubectl delete svc service-name
+7.  Delete cluster
+    - eksctl delete cluster --name cluster-name
